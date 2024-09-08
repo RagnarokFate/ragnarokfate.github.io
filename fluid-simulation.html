@@ -63,24 +63,92 @@
         <div class="row">
           <div class="col-lg-8 ftco-animate">
             <h2 class="mb-3">Fluid Simulation Using Grid-Based Method</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
+            <hr color ='white' style="hr {border: 1px white; }">
+
+            <p><B>Background :</B>
+            Fluid dynamics is a widely explored topic in natural sciences and has found extensive application in computer graphics, particularly in the simulation of fluid. In grid-based computational simulations, the Navier-Stokes equations are key to describing fluid dynamics in a natural and realistic manner. Joe Stam’s influential paper, “Stable Fluids” (1999), introduced a numerical solution for these equations, which has since become a foundational approach in computational fluid dynamics. While physically accurate fluid simulations are often complex and computationally expensive, our focus here is on solutions designed for game engines, prioritizing visual quality and real-time performance over strict physical accuracy. This approach allows for the creation of realistic effects, such as swirling smoke or fluid textures, with algorithms that remain stable and fast even with large time steps. In this blog post, we will explore how these algorithms can be implemented in 2D fluid simulations, offering both a theoretical understanding of the Navier-Stokes equations and practical insights into real-time applications.</p>            <p>
             <p>
-              <img src="images\image_1.jpg" alt="" class="img-fluid">
+              <video width="100%" height="100%" controls autoplay>
+                <source src="blogs-content\fluid-simulation\video\Fluid_Simulation-negate.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </p>
-            <p>Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
-            <h2 class="mb-3 mt-5">#2. Creative WordPress Themes</h2>
-            <p>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
+            <p><B>Definitions :</B>
+              <ul>
+                <li><strong>Navier-Stokes Equations:</strong> These equations describe the balance of momentum for Newtonian fluids while incorporating the conservation of mass. They capture how fluid movement within a given domain is influenced by factors such as pressure, temperature, and density, all governed by Newton's second law of motion.</li>
+                <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+                  <p>
+                    <img src="blogs-content\fluid-simulation\img\Navier-Stokes_Equations.png" class="img-fluid" width="480" > </br>
+                    <em>Figure 1 : Navier-Stokes Equations</em>
+                </p>
+                </div>
+
+                <li><strong>Curl & Divergence:</strong> Divergence measures how much a fluid flows either into or out of a specific point in a vector field. On the other hand, curl quantifies the rotation or swirling motion of the fluid around a point, indicating how much it spins in the flow.</li>
+                <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+                  <p>
+                    <img src="blogs-content\fluid-simulation\img\Curls_Divergence.png" class="img-fluid" width="480" > </br>
+                    <em>Figure 2 : Curls & Divergence</em>
+                </p>
+                </div>
+
+                <li><strong>Lagrangian & Eulerian Viewpoints:</strong> The Lagrangian perspective tracks individual fluid particles as they move through space over time, whereas the Eulerian viewpoint focuses on observing changes in the velocity field within a fixed region of space. While the Lagrangian approach is often easier to understand conceptually, the Eulerian method simplifies the calculation of spatial derivatives.</li>
+                <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+                  <p>
+                    <img src="blogs-content\fluid-simulation\img\Lagrangian_Eulerian_Viewpoints.png" class="img-fluid" width="480" > </br>
+                    <em>Figure 3 : Lagrangian & Eulerian Viewpoints</em>
+                </p>
+                </div>
+                
+              </ul>
+            </p>
+            <h4 class="mb-3 mt-5">Fluid Force Dynamics</h2>
+            <hr color ='white' style="hr {border: 1px white; }">
+
+            <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+              <p>
+                <img src="blogs-content\fluid-simulation\img\Fluid_Force_Dynamics.png" class="img-fluid" width="720" > </br>
+                <em>Figure 4 : Fluid Force Dynamics - Basic structure of the Fluid Force Dynamics where for each timestep it compute the three steps</em>
+            </p>
+            </div>
+
             <p>
-              <img src="images\image_2.jpg" alt="" class="img-fluid">
+              <ol>
+                <li><b>Initialize Grid Values: </b> Begin by setting the initial values for each grid cell, defining the fluid's initial state across the simulation domain.</li>
+                <li><b>Grid Value Modifiers:</b> Adjust key variables based on user input or predefined settings, such as those controlled by a graphical user interface (GUI), to influence the simulation’s behavior.</li>
+                <li><b>viscous diffusion</b> Compute the diffusion process to simulate how the fluid spreads out over time, accounting for the viscosity, which determines the fluid's resistance to flow and internal friction.</li>
+                <li><b>Advection</b> Calculate the movement of fluid particles within the grid, ensuring that fluid properties like velocity and temperature are transported accurately through the simulation space.</li>
+              </ol>
             </p>
-            <p>Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
-            <p>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
-            <p>Adipisci vero culpa, eius nobis soluta. Dolore, maxime ullam ipsam quidem, dolor distinctio similique asperiores voluptas enim, exercitationem ratione aut adipisci modi quod quibusdam iusto, voluptates beatae iure nemo itaque laborum. Consequuntur et pariatur totam fuga eligendi vero dolorum provident. Voluptatibus, veritatis. Beatae numquam nam ab voluptatibus culpa, tenetur recusandae!</p>
-            <p>Voluptas dolores dignissimos dolorum temporibus, autem aliquam ducimus at officia adipisci quasi nemo a perspiciatis provident magni laboriosam repudiandae iure iusto commodi debitis est blanditiis alias laborum sint dolore. Dolores, iure, reprehenderit. Error provident, pariatur cupiditate soluta doloremque aut ratione. Harum voluptates mollitia illo minus praesentium, rerum ipsa debitis, inventore?</p>
+
+            <h4 class="mb-3 mt-5">Fluid Force Dynamics Implementation:</h4>
+            <div>
+              <ol>
+                <li><strong>Grid Initialization:</strong>
+                <p>In this step, you define the initial state of the simulation by initializing key variables for each grid cell. These variables include color, depth, and velocity, as well as any additional variables that can enhance the visualization of fluid flow. This setup ensures a clear depiction of the fluid's starting state and provides a basis for observing how the fluid evolves over time.</p>
+                </li>
+                <li><strong>Grid Value Modification:</strong>
+                <p>Dynamic modification of grid values is facilitated through various tools and interfaces. A common method is using a graphical user interface (GUI) to adjust parameters like velocity, pressure, and external forces. This allows for the simulation of environmental factors such as wind or gravity, interactions with solid objects, and adjustments for turbulence or boundary conditions. Real-time manipulation of these variables enhances the interactivity and customization of the simulation experience.</p>
+                </li>
+                <li><strong>Fluid Viscosity Diffusion:</strong>
+                <p>Diffusion in fluid simulation spreads values like density or temperature to neighboring grid cells over time. Two main methods are used:</p>
+                <ul>
+                <li><strong>Sum of Absolute Differences (SAD):</strong> This approach uses a linear relationship to calculate differences between a cell and its neighbors, applying a diffusion factor to spread values. Although straightforward, SAD can cause instability with large diffusion rates, leading to oscillations and divergence.</li>
+                <li><strong>Smooth Diffusion:</strong> Based on Joe Stam's technique, this method finds future values that, when reversed in time, match the current state. This hyperbolic relationship ensures stability, avoiding oscillations and divergence, but introduces the challenge of solving a linear system of unknowns.</li>
+                </ul>
+                <p>
+                  <video width="100%" height="100%" controls>
+                    <source src="blogs-content\fluid-simulation\video\diffusion_simulation.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </p>
+                </li>
+                <li><strong>Advection Step:</strong>
+                <p>Advection describes how quantities like smoke or fluid density move based on velocity. The reverse advection technique traces values backward in time to their original positions, using the inverted velocity field. This method maintains stability and ensures smooth transitions. After computing new positions, values are interpolated across neighboring cells using bilinear interpolation to ensure a smooth distribution.</p>
+                </li>
+              </ol>
+              
+
+            </div>
             
-            <p>
-              <img src="images\image_3.jpg" alt="" class="img-fluid">
-            </p>
+            
             
             <div class="tag-widget post-tag-container mb-5 mt-5">
               <div class="tagcloud">
@@ -123,20 +191,40 @@
                 <li><a href="#">Landscape Design <span>(42)</span></a></li>
               </ul>
             </div> -->
+            
 
             <div class="sidebar-box ftco-animate">
+
+              <div class="sidebar-box ftco-animate"></div>
+              <h3 class="heading-sidebar">Keywords</h3>
+              <div class="tagcloud">
+                <a href="#" class="tag-cloud-link">Simulation</a>
+                <a href="#" class="tag-cloud-link">Navier-Stokes Equations</a>
+                <a href="#" class="tag-cloud-link">Curl</a>
+                <a href="#" class="tag-cloud-link">Divergence</a>
+                <a href="#" class="tag-cloud-link">Advection</a>
+                <a href="#" class="tag-cloud-link">Diffusion</a>
+                <a href="#" class="tag-cloud-link">Gauss-Seidel relaxation</a>
+                <a href="#" class="tag-cloud-link">Helmholtz decomposition</a>
+              </div>
+            </div>
+
               <h3 class="heading-sidebar">Recent Blog</h3>
+              <!-- BLOG #1 -->
               <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/blog-covers/Fluid_Simulation.png);"></a>
                 <div class="text">
                   <h3 class="heading"><a href="#">Fluid Simulation Using Grid-Based Method</a></h3>
                   <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> March 30, 2024</a></div>
-                    <div><a href="#"><span class="icon-person"></span> RagnarokFate</a></div>
-                    <!-- <div><a href="#"><span class="icon-chat"></span> 19</a></div> -->
+                    <div><a ><span class="icon-calendar"></span> Augest 30, 2024</a></div>
+                    <div><a ><span class="icon-person"></span> RagnarokFate</a></div>
+                    <div><a href="https://github.com/RagnarokFate/FluidSimulation"><span class="icon-github"></span> Repository</a></div>
                   </div>
                 </div>
               </div>
+              
+              
+
               <!-- <div class="block-21 mb-4 d-flex">
                 <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
                 <div class="text">
@@ -160,7 +248,7 @@
                 </div>
               </div> -->
             </div>
-
+            
             <!-- <div class="sidebar-box ftco-animate">
               <h3 class="heading-sidebar">Paragraph</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia delectus aut, sunt placeat nam vero culpa sapiente consectetur similique, inventore eos fugit cupiditate numquam!</p>
@@ -178,7 +266,7 @@
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">About</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p> I'm a Junior Computer Science major interested in Image Processing, Computer Graphics, Vision and artifical Intellgience.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="www.linkedin.com/in/bashar-beshoti"> <span class="icon-linkedin"></span>	</a></li>
                 <li class="ftco-animate"><a href="https://github.com/RagnarokFate"><span class="icon-github"></span></a></li>
