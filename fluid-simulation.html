@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth;">
   <head>
     <title>Ragnarök Fate</title>
     <meta charset="utf-8">
@@ -62,17 +62,16 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 ftco-animate">
-            <h2 class="mb-3">Fluid Simulation Using Grid-Based Method</h2>
+            <h2 class="mb-3" id="blog_title"><span style="vertical-align: middle;">🔗</span> Fluid Simulation Using Grid-Based Method</h2>
             <hr color ='white' style="hr {border: 1px white; }">
-
-            <p><B>Background :</B>
+            <h5 class="mb-3 mt-5" id="blog_sub1"><span style="vertical-align: middle;">🔗</span> Background</h2>
             Fluid dynamics is a widely explored topic in natural sciences and has found extensive application in computer graphics, particularly in the simulation of fluid. In grid-based computational simulations, the Navier-Stokes equations are key to describing fluid dynamics in a natural and realistic manner. Joe Stam’s influential paper, “Stable Fluids” (1999), introduced a numerical solution for these equations, which has since become a foundational approach in computational fluid dynamics. While physically accurate fluid simulations are often complex and computationally expensive, our focus here is on solutions designed for game engines, prioritizing visual quality and real-time performance over strict physical accuracy. This approach allows for the creation of realistic effects, such as swirling smoke or fluid textures, with algorithms that remain stable and fast even with large time steps. In this blog post, we will explore how these algorithms can be implemented in 2D fluid simulations, offering both a theoretical understanding of the Navier-Stokes equations and practical insights into real-time applications.</p>            <p>
             <p>
               <video width="100%" height="100%" controls autoplay>
                 <source src="blogs-content\fluid-simulation\video\Fluid_Simulation-negate.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </p>
-            <p><B>Definitions :</B>
+            <h5 class="mb-3 mt-5" id="blog_sub2"><span style="vertical-align: middle;">🔗</span> Definitions</h2>
               <ul>
                 <li><strong>Navier-Stokes Equations:</strong> These equations describe the balance of momentum for Newtonian fluids while incorporating the conservation of mass. They capture how fluid movement within a given domain is influenced by factors such as pressure, temperature, and density, all governed by Newton's second law of motion.</li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
@@ -100,7 +99,7 @@
                 
               </ul>
             </p>
-            <h4 class="mb-3 mt-5">Fluid Force Dynamics</h2>
+            <h5 class="mb-3 mt-5" id="blog_sub3"><span style="vertical-align: middle;">🔗</span> Fluid Forces Dynamics</h2>
             <hr color ='white' style="hr {border: 1px white; }">
 
             <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
@@ -118,8 +117,7 @@
                 <li><b>Advection</b> Calculate the movement of fluid particles within the grid, ensuring that fluid properties like velocity and temperature are transported accurately through the simulation space.</li>
               </ol>
             </p>
-
-            <h4 class="mb-3 mt-5">Fluid Force Dynamics Implementation:</h4>
+            <h5 class="mb-3 mt-5" id="blog_sub4"><span style="vertical-align: middle;">🔗</span> Force Dynamics Implementation</h2>
             <div>
               <ol>
                 <li><strong>Grid Initialization:</strong>
@@ -182,15 +180,16 @@
                 </div>
               </form>
             </div> -->
-            <!-- <div class="sidebar-box ftco-animate">
-            	<h3 class="heading-sidebar">Categories</h3>
+            <div class="sidebar-box ftco-animate">
+            	<h3 class="heading-sidebar">Fluid Simulation - INDEX</h3>
+              <hr color ='white' style="hr {border: 1px white; }">
               <ul class="categories">
-                <li><a href="#">Interior Design <span>(12)</span></a></li>
-                <li><a href="#">Exterior Design <span>(22)</span></a></li>
-                <li><a href="#">Industrial Design <span>(37)</span></a></li>
-                <li><a href="#">Landscape Design <span>(42)</span></a></li>
+                <li><a href="fluid-simulation.html#blog_title"> - Background </a></li>
+                <li><a href="fluid-simulation.html#blog_sub2">- Definitions </a></li>
+                <li><a href="fluid-simulation.html#blog_sub3">- Fluid Forces Dynamics </a></li>
+                <li><a href="fluid-simulation.html#blog_sub4"> - Force Dynamics Implementation </a></li>
               </ul>
-            </div> -->
+            </div>
             
 
             <div class="sidebar-box ftco-animate">
