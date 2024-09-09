@@ -46,7 +46,7 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section class="hero-wrap js-fullheight" style="background-image: url('images/background.png');" data-stellar-background-ratio="0.5">
+	  <section class="hero-wrap js-fullheight" style="background-image: url('images/background.png');" data-stellar-background-ratio="0.7">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
@@ -73,15 +73,15 @@
             </p>
             <h5 class="mb-3 mt-5" id="blog_sub2"><span style="vertical-align: middle;">🔗</span> Definitions</h2>
               <ul>
-                <li><strong>Navier-Stokes Equations:</strong> These equations describe the balance of momentum for Newtonian fluids while incorporating the conservation of mass. They capture how fluid movement within a given domain is influenced by factors such as pressure, temperature, and density, all governed by Newton's second law of motion.</li>
+                <li><strong><a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">Navier-Stokes Equations:</a></strong> These equations describe the balance of momentum for Newtonian fluids while incorporating the conservation of mass. They capture how fluid movement within a given domain is influenced by factors such as pressure, temperature, and density, all governed by Newton's second law of motion.</li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
                     <img src="blogs-content\fluid-simulation\img\Navier-Stokes_Equations.png" class="img-fluid" width="480" > </br>
-                    <em>Figure 1 : Navier-Stokes Equations</em>
+                    <em>Figure 1 : Navier-Stokes Equations </em>
                 </p>
                 </div>
 
-                <li><strong>Curl & Divergence:</strong> Divergence measures how much a fluid flows either into or out of a specific point in a vector field. On the other hand, curl quantifies the rotation or swirling motion of the fluid around a point, indicating how much it spins in the flow.</li>
+                <li><strong><a href="https://www.youtube.com/watch?v=rB83DpBJQsE">Curl & Divergence:</a></strong> Divergence measures how much a fluid flows either into or out of a specific point in a vector field. On the other hand, curl quantifies the rotation or swirling motion of the fluid around a point, indicating how much it spins in the flow.</li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
                     <img src="blogs-content\fluid-simulation\img\Curls_Divergence.png" class="img-fluid" width="480" > </br>
@@ -89,7 +89,7 @@
                 </p>
                 </div>
 
-                <li><strong>Lagrangian & Eulerian Viewpoints:</strong> The Lagrangian perspective tracks individual fluid particles as they move through space over time, whereas the Eulerian viewpoint focuses on observing changes in the velocity field within a fixed region of space. While the Lagrangian approach is often easier to understand conceptually, the Eulerian method simplifies the calculation of spatial derivatives.</li>
+                <li><strong><a href="https://en.wikipedia.org/wiki/Lagrangian_and_Eulerian_specification_of_the_flow_field">Lagrangian & Eulerian Viewpoints:</a></strong> The Lagrangian perspective tracks individual fluid particles as they move through space over time, whereas the Eulerian viewpoint focuses on observing changes in the velocity field within a fixed region of space. While the Lagrangian approach is often easier to understand conceptually, the Eulerian method simplifies the calculation of spatial derivatives.</li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
                     <img src="blogs-content\fluid-simulation\img\Lagrangian_Eulerian_Viewpoints.png" class="img-fluid" width="480" > </br>
@@ -113,7 +113,7 @@
               <ol>
                 <li><b>Initialize Grid Values: </b> Begin by setting the initial values for each grid cell, defining the fluid's initial state across the simulation domain.</li>
                 <li><b>Grid Value Modifiers:</b> Adjust key variables based on user input or predefined settings, such as those controlled by a graphical user interface (GUI), to influence the simulation’s behavior.</li>
-                <li><b>viscous diffusion</b> Compute the diffusion process to simulate how the fluid spreads out over time, accounting for the viscosity, which determines the fluid's resistance to flow and internal friction.</li>
+                <li><b>Viscous diffusion</b> Compute the diffusion process to simulate how the fluid spreads out over time, accounting for the viscosity, which determines the fluid's resistance to flow and internal friction.</li>
                 <li><b>Advection</b> Calculate the movement of fluid particles within the grid, ensuring that fluid properties like velocity and temperature are transported accurately through the simulation space.</li>
               </ol>
             </p>
@@ -141,12 +141,55 @@
                 <li><strong>Advection Step:</strong>
                 <p>Advection describes how quantities like smoke or fluid density move based on velocity. The reverse advection technique traces values backward in time to their original positions, using the inverted velocity field. This method maintains stability and ensures smooth transitions. After computing new positions, values are interpolated across neighboring cells using bilinear interpolation to ensure a smooth distribution.</p>
                 </li>
+                <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+                  <p>
+                    <img src="blogs-content\fluid-simulation\img\Advection.png" class="img-fluid" width="720" > </br>
+                    <em>Figure 5 : Forward Advection & Backtrace Advection : Basic idea behind the advection step. Instead of moving the cell centers forward in
+                      time (b) through the velocity field shown in (a), we look for the particles which end up exactly at 
+                      the cell centers by tracing backwards in time from the cell centers (c). </em>
+                </p>
+                </div>
               </ol>
-              
-
             </div>
+            <h5 class="mb-3 mt-5" id="blog_sub5"><span style="vertical-align: middle;">🔗</span> Domain Behavior</h2>
+              <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+                <p>
+                  <img src="blogs-content\fluid-simulation\img\Domain_Behavior.png" class="img-fluid" width="480" > </br>
+                  <em>Figure 6 : Domain Behavior; Rebound Domain & Seamless Domain  </em>
+              </p>
+              </div>
+              <p>Rebound domain behavior suggests a domain where the fluid hits the boundaries and is reflected back into the domain, as if the walls act like mirrors to the flow and this is what i used for my project. While Seamless Domain behavior indicates a continuous flow, where the fluid leaving one side of the domain immediately re-enters from the opposite side, creating a seamless loop.</p>
             
+            <h5 class="mb-3 mt-5" id="blog_sub6"><span style="vertical-align: middle;">🔗</span> Projection</h2>
+              <p>
+                The projection step ensures that the fluid remains <b>mass-conserving and incompressible</b>, which is crucial for accurately simulating fluid dynamics using the Navier-Stokes equations. To achieve this, the velocity field must be corrected, as it typically doesn't conserve mass after earlier steps. Simply solving the underlying partial differential equations can lead to instability, so numerical stability is vital for the simulation to produce reliable results. </br>
+                This is where the <b>Helmholtz-Hodge decomposition</b> comes in, which allows us to split the velocity field into two components: a mass-conserving field with desired vortex-like patterns and a gradient field, which causes unwanted inward or outward flows. By subtracting the gradient field from the velocity field, we correct it to be mass-conserving. This correction involves solving a linear system called the <a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson equation</a>, stabilizing the simulation and ensuring the fluid behaves realistically.
+                <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+                  <p>
+                    <img src="blogs-content\fluid-simulation\img\Helmholtz-Hodge_decomposition.png" class="img-fluid" width="480" > </br>
+                    <em>Figure 7 : Helmholtz-Hodge decomposition  </em>
+                  </p>
+                </div>
+              </p>
             
+            <h5 class="mb-3 mt-5" id="blog_sub7"><span style="vertical-align: middle;">🔗</span> Simulation and Visualization</h2>
+              <p>
+                The fluid simulation procedure begins by initializing key variables, such as velocity and density fields. While the simulation is active, the previous timesteps for both velocity and density are retained. The velocity field is then computed using fluid forces such as external forces, diffusion, and advection, followed by the computation of the density field using similar dynamics. Finally, a projection step is performed to ensure mass conservation, after which the simulation results are visualized. This process is repeated continuously for each simulation step.
+              </p>
+              <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
+                <p>
+                  <img src="blogs-content\fluid-simulation\img\Simulation.png" class="img-fluid" width="360" > </br>
+                  <em>Figure 8 : Simulation steps  </em>
+                </p>
+              </div>
+            
+            <h5 class="mb-3 mt-5" id="blog_sub8"><span style="vertical-align: middle;">🔗</span> Output</h2>
+                <p>
+                <video width="100%" height="100%" controls autoplay loop>
+                  <source src="blogs-content\fluid-simulation\video\Fluid_Simulation_pre-negate.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </p>
+              
             
             <div class="tag-widget post-tag-container mb-5 mt-5">
               <div class="tagcloud">
@@ -185,9 +228,13 @@
               <hr color ='white' style="hr {border: 1px white; }">
               <ul class="categories">
                 <li><a href="fluid-simulation.html#blog_title"> - Background </a></li>
-                <li><a href="fluid-simulation.html#blog_sub2">- Definitions </a></li>
-                <li><a href="fluid-simulation.html#blog_sub3">- Fluid Forces Dynamics </a></li>
+                <li><a href="fluid-simulation.html#blog_sub2"> - Definitions </a></li>
+                <li><a href="fluid-simulation.html#blog_sub3"> - Fluid Forces Dynamics </a></li>
                 <li><a href="fluid-simulation.html#blog_sub4"> - Force Dynamics Implementation </a></li>
+                <li><a href="fluid-simulation.html#blog_sub5"> - Domain Behavior </a></li>
+                <li><a href="fluid-simulation.html#blog_sub6"> - Projection </a></li>
+                <li><a href="fluid-simulation.html#blog_sub7"> - Simulation and Visualization </a></li>
+                <li><a href="fluid-simulation.html#blog_sub8"> - Output </a></li>
               </ul>
             </div>
             
@@ -197,14 +244,14 @@
               <div class="sidebar-box ftco-animate"></div>
               <h3 class="heading-sidebar">Keywords</h3>
               <div class="tagcloud">
-                <a href="#" class="tag-cloud-link">Simulation</a>
-                <a href="#" class="tag-cloud-link">Navier-Stokes Equations</a>
-                <a href="#" class="tag-cloud-link">Curl</a>
-                <a href="#" class="tag-cloud-link">Divergence</a>
-                <a href="#" class="tag-cloud-link">Advection</a>
-                <a href="#" class="tag-cloud-link">Diffusion</a>
-                <a href="#" class="tag-cloud-link">Gauss-Seidel relaxation</a>
-                <a href="#" class="tag-cloud-link">Helmholtz decomposition</a>
+                <a class="tag-cloud-link">Simulation</a>
+                <a class="tag-cloud-link">Navier-Stokes Equations</a>
+                <a class="tag-cloud-link">Curl</a>
+                <a class="tag-cloud-link">Divergence</a>
+                <a class="tag-cloud-link">Advection</a>
+                <a class="tag-cloud-link">Diffusion</a>
+                <a class="tag-cloud-link">Gauss-Seidel relaxation</a>
+                <a class="tag-cloud-link">Helmholtz decomposition</a>
               </div>
             </div>
 
