@@ -76,7 +76,7 @@
                 <li><strong><a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">Navier-Stokes Equations:</a></strong> These equations describe the balance of momentum for Newtonian fluids while incorporating the conservation of mass. They capture how fluid movement within a given domain is influenced by factors such as pressure, temperature, and density, all governed by Newton's second law of motion.</li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
-                    <img src="blogs-content\fluid-simulation\img\Navier-Stokes_Equations.png" class="img-fluid" width="480" > </br>
+                    <img src="blogs-content\fluid-simulation\img\Navier-Stokes_Equations.png" class="img-fluid" width="480" alt="Navier-Stokes_Equations"> </br>
                     <em>Figure 1 : Navier-Stokes Equations </em>
                 </p>
                 </div>
@@ -84,7 +84,7 @@
                 <li><strong><a href="https://www.youtube.com/watch?v=rB83DpBJQsE">Curl & Divergence:</a></strong> Divergence measures how much a fluid flows either into or out of a specific point in a vector field. On the other hand, curl quantifies the rotation or swirling motion of the fluid around a point, indicating how much it spins in the flow.</li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
-                    <img src="blogs-content\fluid-simulation\img\Curls_Divergence.png" class="img-fluid" width="480" > </br>
+                    <img src="blogs-content\fluid-simulation\img\Curls_Divergence.png" class="img-fluid" width="480" alt="Curls_Divergence"> </br>
                     <em>Figure 2 : Curls & Divergence</em>
                 </p>
                 </div>
@@ -92,7 +92,7 @@
                 <li><strong><a href="https://en.wikipedia.org/wiki/Lagrangian_and_Eulerian_specification_of_the_flow_field">Lagrangian & Eulerian Viewpoints:</a></strong> The Lagrangian perspective tracks individual fluid particles as they move through space over time, whereas the Eulerian viewpoint focuses on observing changes in the velocity field within a fixed region of space. While the Lagrangian approach is often easier to understand conceptually, the Eulerian method simplifies the calculation of spatial derivatives.</li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
-                    <img src="blogs-content\fluid-simulation\img\Lagrangian_Eulerian_Viewpoints.png" class="img-fluid" width="480" > </br>
+                    <img src="blogs-content\fluid-simulation\img\Lagrangian_Eulerian_Viewpoints.png" class="img-fluid" width="480" alt="Lagrangian_Eulerian_Viewpoints" > </br>
                     <em>Figure 3 : Lagrangian & Eulerian Viewpoints</em>
                 </p>
                 </div>
@@ -104,7 +104,7 @@
 
             <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
               <p>
-                <img src="blogs-content\fluid-simulation\img\Fluid_Force_Dynamics.png" class="img-fluid" width="720" > </br>
+                <img src="blogs-content\fluid-simulation\img\Fluid_Force_Dynamics.png" class="img-fluid" width="720" alt="Fluid Force Dynamics - Basic structure of the Fluid Force Dynamics where for each timestep it compute the three steps"> </br>
                 <em>Figure 4 : Fluid Force Dynamics - Basic structure of the Fluid Force Dynamics where for each timestep it compute the three steps</em>
             </p>
             </div>
@@ -143,7 +143,7 @@
                 </li>
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
-                    <img src="blogs-content\fluid-simulation\img\Advection.png" class="img-fluid" width="720" > </br>
+                    <img src="blogs-content\fluid-simulation\img\Advection.png" class="img-fluid" width="720" alt="Forward Advection & Backtrace Advection : Basic idea behind the advection step. Instead of moving the cell centers forward in"> </br>
                     <em>Figure 5 : Forward Advection & Backtrace Advection : Basic idea behind the advection step. Instead of moving the cell centers forward in
                       time (b) through the velocity field shown in (a), we look for the particles which end up exactly at 
                       the cell centers by tracing backwards in time from the cell centers (c). </em>
@@ -154,7 +154,7 @@
             <h5 class="mb-3 mt-5" id="blog_sub5"><span style="vertical-align: middle;">🔗</span> Domain Behavior</h2>
               <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                 <p>
-                  <img src="blogs-content\fluid-simulation\img\Domain_Behavior.png" class="img-fluid" width="480" > </br>
+                  <img src="blogs-content\fluid-simulation\img\Domain_Behavior.png" class="img-fluid" width="480" alt="Domain Behavior; Rebound Domain & Seamless Domain"> </br>
                   <em>Figure 6 : Domain Behavior; Rebound Domain & Seamless Domain  </em>
               </p>
               </div>
@@ -166,7 +166,7 @@
                 This is where the <b>Helmholtz-Hodge decomposition</b> comes in, which allows us to split the velocity field into two components: a mass-conserving field with desired vortex-like patterns and a gradient field, which causes unwanted inward or outward flows. By subtracting the gradient field from the velocity field, we correct it to be mass-conserving. This correction involves solving a linear system called the <a href="https://en.wikipedia.org/wiki/Poisson%27s_equation">Poisson equation</a>, stabilizing the simulation and ensuring the fluid behaves realistically.
                 <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                   <p>
-                    <img src="blogs-content\fluid-simulation\img\Helmholtz-Hodge_decomposition.png" class="img-fluid" width="480" > </br>
+                    <img src="blogs-content\fluid-simulation\img\Helmholtz-Hodge_decomposition.png" class="img-fluid" width="480" alt="Helmholtz-Hodge decomposition"> </br>
                     <em>Figure 7 : Helmholtz-Hodge decomposition  </em>
                   </p>
                 </div>
@@ -178,7 +178,7 @@
               </p>
               <div style="            display: flex;flex-direction: column;align-items: center; text-align: center;">
                 <p>
-                  <img src="blogs-content\fluid-simulation\img\Simulation.png" class="img-fluid" width="360" > </br>
+                  <img src="blogs-content\fluid-simulation\img\Simulation.png" class="img-fluid" width="360" alt="Simulation steps"> </br>
                   <em>Figure 8 : Simulation steps  </em>
                 </p>
               </div>
@@ -202,7 +202,7 @@
             
             <div class="about-author d-flex p-4 bg-dark">
               <div class="bio mr-5">
-                <img src="images\side-picture.png" alt="Image placeholder" class="img-fluid mb-4" style="border-radius:16px;">
+                <img src="images\side-picture.png" alt="Author's side picture" class="img-fluid mb-4" style="border-radius:16px;">
               </div>
               <div class="desc">
                 <h3>Bashar Beshoti</h3>
@@ -361,8 +361,8 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made by <a href="https://colorlib.com" target="_blank" rel="noopener">Colorlib</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>
