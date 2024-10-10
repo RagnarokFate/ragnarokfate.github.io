@@ -278,21 +278,24 @@
 document.addEventListener('DOMContentLoaded', function() {
     var navLinks = document.querySelectorAll('#ftco-nav .nav-link');
     navLinks.forEach(function(link) {
-        link.addEventListener('click', function(event) {
-            // Prevent default anchor behavior
-            event.preventDefault();
+		link.addEventListener('click', function(event) {
+			// Check if the link is an internal link
+			if (this.getAttribute('href').startsWith('#')) {
+				// Prevent default anchor behavior
+				event.preventDefault();
 
-            // Get the target section ID
-            var targetId = this.getAttribute('href').substring(1);
+				// Get the target section ID
+				var targetId = this.getAttribute('href').substring(1);
 
-            // Scroll to the target section
-            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+				// Scroll to the target section
+				document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
 
-            // Keep the menu open
-            var navbarToggler = document.querySelector('.navbar-toggler');
-            if (navbarToggler.getAttribute('aria-expanded') === 'true') {
-                navbarToggler.click();
-            }
-        });
+				// Keep the menu open
+				var navbarToggler = document.querySelector('.navbar-toggler');
+				if (navbarToggler.getAttribute('aria-expanded') === 'true') {
+					navbarToggler.click();
+				}
+			}
+		});
     });
 });
