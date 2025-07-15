@@ -1,0 +1,60 @@
+{
+  "licenses_and_certifications": [
+    {
+      "name": "Computer Networks Fundamentals",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "UC-abd1beac-a395-4776-af3a-5daf8208f126",
+      "credential_url": "https://www.udemy.com/certificate/UC-abd1beac-a395-4776-af3a-5daf8208f126/"
+    },
+    {
+      "name": "Learn Git Fast: Git & GitHub Version Control Guide",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "UC-1178852f-1650-464a-b772-c82bafb1baa8",
+      "credential_url": "https://www.udemy.com/certificate/UC-1178852f-1650-464a-b772-c82bafb1baa8/"
+    },
+    {
+      "name": "Microsoft Azure",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "UC-996fbf51-0f60-46ec-8fc9-42775d68f06",
+      "credential_url": "https://www.udemy.com/certificate/UC-996bff51-0fc0-46ec-8fc9-42775d68cf06/"
+    },
+    {
+      "name": "Java Concurrency: Multithreading",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-06",
+      "expiration_date": null,
+      "credential_id": "UC-b0dcbd0d-827e-434f-a8cb-37095d738283",
+      "credential_url": "https://www.udemy.com/certificate/UC-b0bdcb0d-827e-434f-a8cb-37095d738283/"
+    },
+    {
+      "name": "Introduction to Software Engineering",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-06",
+      "expiration_date": null,
+      "credential_id": "UC-1178852f-1650-464a-b772-c82bafb1baa8",
+      "credential_url": "https://www.udemy.com/certificate/UC-1178852f-1650-464a-b772-c82bafb1baa8/"
+    },
+    {
+      "name": "Robotics & Automation",
+      "issuing_organization": "Moona - A Space For Change",
+      "issue_date": "2024-11",
+      "expiration_date": null,
+      "credential_id": "514983261",
+      "credential_url": "https://drive.google.com/file/d/1RVbw6Qx58CLm7e6Oa8pS0q5g7l6FslOJ"
+    },
+    {
+      "name": "Fundamentals of Deep Learning",
+      "issuing_organization": "NVIDIA",
+      "issue_date": "2024-07",
+      "expiration_date": null,
+      "credential_id": "NgKy1nZTmCnqvNqml2s8A",
+      "credential_url": "https://learn.nvidia.com/certificates?id=NgKyy1nZTnChqvNqmL2s8A"
+    }
+  ]
+}

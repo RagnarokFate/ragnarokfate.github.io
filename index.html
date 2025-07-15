@@ -11,9 +11,24 @@
     <!-- <meta http-equiv="refresh" content="3;url=./home.html"> -->
 
     <script>
-        setTimeout(function() {
-            window.location.href = './home.html';
-        }, 3000); // 3000 milliseconds = 3 seconds
+        // Function to check if user wants to go directly to certifications
+        function checkForCertificationRedirect() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirect = urlParams.get('redirect');
+            
+            if (redirect === 'certifications') {
+                setTimeout(function() {
+                    window.location.href = './home.html#certifications-section';
+                }, 3000);
+            } else {
+                setTimeout(function() {
+                    window.location.href = './home.html';
+                }, 3000);
+            }
+        }
+        
+        // Run the check
+        checkForCertificationRedirect();
     </script>
 
     <style>
