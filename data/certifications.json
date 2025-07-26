@@ -1,6 +1,39 @@
 {
   "licenses_and_certifications": [
     {
+      "name": "NULL",
+      "issuing_organization": "NULL",
+      "issue_date": "NULL",
+      "expiration_date": null,
+      "credential_id": "NULL",
+      "credential_url": "NULL"
+    },
+    {
+      "name": "SQL, MYSQL, POSTGRESQL & MONGODB: All-in-One Database Course",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "UC-de611f9d-db78-41b7-9085-c26ed5e6a8c1",
+      "credential_url": "https://www.udemy.com/certificate/UC-de611f9d-db78-41b7-9085-c26ed5e6a8c1/"
+    },
+    {
+      "name": "The Complete MySQL Bootcamp: Go from Beginner to Expert",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "UC-7e7be374-1ac4-4fc0-9037-2ca5e9a6326f",
+      "credential_url": "https://www.udemy.com/certificate/UC-7e7be374-1ac4-4fc0-9037-2ca5e9a6326f/"
+    
+    },
+    {
+      "name": "Master React.js with AI: From Basics to Advanced Development",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "UC-e3ac0cc6-89ef-4262-a245-62441261b785",
+      "credential_url": "https://www.udemy.com/certificate/UC-e3ac0cc6-89ef-4262-a245-62441261b785/"
+    },
+    {
       "name": "Computer Networks Fundamentals",
       "issuing_organization": "Udemy",
       "issue_date": "2025-07",
@@ -56,5 +89,6 @@
       "credential_id": "NgKy1nZTmCnqvNqml2s8A",
       "credential_url": "https://learn.nvidia.com/certificates?id=NgKyy1nZTnChqvNqmL2s8A"
     }
+
   ]
 }
