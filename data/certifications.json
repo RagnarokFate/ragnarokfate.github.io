@@ -7,6 +7,38 @@
       "expiration_date": null,
       "credential_id": "NULL",
       "credential_url": "NULL"
+    },    
+    {
+      "name": "Learning Kubernetes",
+      "issuing_organization": "LinkedIn",
+      "issue_date": "2025-08",
+      "expiration_date": null,
+      "credential_id": "bc50355a21e260c7b62fd5adc7476687ab5ebdfb497cc63b37015a8d77331a7a",
+      "credential_url": "https://www.linkedin.com/learning/certificates/bc50355a21e260c7b62fd5adc7476687ab5ebdfb497cc63b37015a8d77331a7a"
+    },
+    {
+      "name": "Basics of Cloud Computing | Fundamentals of Cloud Computing",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-08",
+      "expiration_date": null,
+      "credential_id": "UC-87f0f978-d180-4e98-960d-f230862ea0db",
+      "credential_url": "https://www.udemy.com/certificate/UC-87f0f978-d180-4e98-960d-f230862ea0db/"
+    },
+    {
+      "name": "React Crash Course: From Zero to Hero",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "UC-875beb00-03d4-42e4-9d86-82ce654246b7",
+      "credential_url": "https://www.udemy.com/certificate/UC-875beb00-03d4-42e4-9d86-82ce654246b7/"
+    },
+    {
+      "name": "Generative AI vs. Traditional AI",
+      "issuing_organization": "LinkedIn",
+      "issue_date": "2025-07",
+      "expiration_date": null,
+      "credential_id": "cfb4abb3c7a3d1cd639142e06e5c501519eb79aa2ccf9e8768626d627dadb138",
+      "credential_url": "https://www.linkedin.com/learning/certificates/cfb4abb3c7a3d1cd639142e06e5c501519eb79aa2ccf9e8768626d627dadb138"
     },
     {
       "name": "SQL, MYSQL, POSTGRESQL & MONGODB: All-in-One Database Course",
@@ -88,7 +120,6 @@
       "expiration_date": null,
       "credential_id": "NgKy1nZTmCnqvNqml2s8A",
       "credential_url": "https://learn.nvidia.com/certificates?id=NgKyy1nZTnChqvNqmL2s8A"
-    }
-
+    }    
   ]
 }
