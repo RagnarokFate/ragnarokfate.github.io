@@ -18,8 +18,10 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
-  --secondary: #6c757d;
+  /* --primary: #007bff;
+  --secondary: #6c757d; */
+  --primary: #46b8a3;
+  --secondary: #000000;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -34,6 +36,7 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
+  
 *,
 *::before,
 *::after {
@@ -9730,10 +9733,10 @@ textarea.form-control {
 }
 
 .cert-tab-button.active {
-  background: #ffb400;
+  background: #46b8a3 ;
   color: #000000;
-  border-color: #ffb400;
-  box-shadow: 0 4px 20px rgba(255, 180, 0, 0.4);
+  border-color: #46b8a3 ;
+  box-shadow: 0 4px 20px rgba(200, 200, 200, 0.4);
 }
 
 /* Simple Certification Cards */
