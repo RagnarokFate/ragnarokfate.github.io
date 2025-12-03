@@ -7,6 +7,30 @@
       "expiration_date": null,
       "credential_id": "NULL",
       "credential_url": "NULL"
+    },
+    {
+      "name": "AI Engineer Professional Certificate Course",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-11",
+      "expiration_date": null,
+      "credential_id": "UC-95729a21-a92b-4c99-a22b-dc36c7b9d824",
+      "credential_url": "https://www.udemy.com/certificate/UC-95729a21-a92b-4c99-a22b-dc36c7b9d824/"
+    },
+    {
+      "name": "AI Engineer Associate Certificate Course",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-11",
+      "expiration_date": null,
+      "credential_id": "UC-5bb99106-1e22-4231-99a9-b90b028d12ec",
+      "credential_url": "https://www.udemy.com/certificate/UC-5bb99106-1e22-4231-99a9-b90b028d12ec/"
+    },
+    {
+      "name": "AI Engineer Associate Certificate Course",
+      "issuing_organization": "Udemy",
+      "issue_date": "2025-10",
+      "expiration_date": null,
+      "credential_id": "UC-9dbf95a8-7274-45b3-81bb-43ccc5794881",
+      "credential_url": "https://www.udemy.com/certificate/UC-9dbf95a8-7274-45b3-81bb-43ccc5794881/"
     },    
     {
       "name": "Learning Kubernetes",
