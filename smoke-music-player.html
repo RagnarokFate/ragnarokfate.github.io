@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+  <title>Smoke Music Player | Ragnarök Fate</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+
+  <link rel="stylesheet" href="css/aos.css">
+
+  <link rel="stylesheet" href="css/ionicons.min.css">
+
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="home.html">Ragnarök Fate</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+        data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"> Menu </span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="home.html#home-section" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="home.html#about-section" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="home.html#resume-section" class="nav-link"><span>Resume</span></a></li>
+          <li class="nav-item"><a href="home.html#certifications-section" class="nav-link"><span>License &
+                Certification</span></a></li>
+          <li class="nav-item"><a href="home.html#skills-section" class="nav-link"><span>Skills</span></a></li>
+          <li class="nav-item"><a href="home.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="home.html#blog-section" class="nav-link"><span>My Blog</span></a></li>
+          <li class="nav-item"><a href="home.html#contact-section" class="nav-link"><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- END nav -->
+  <section class="hero-wrap js-fullheight" style="background-image: url('images/background.png');"
+    data-stellar-background-ratio="1.0">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
+        <div class="col-md-12 ftco-animate pb-5 mb-3 text-center">
+          <h1 class="mb-3 bread">Smoke Music Player</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="home.html">Home <i
+                  class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="home.html#blog-section">Blog
+                <i class="ion-ios-arrow-forward"></i></a></span> <span>Smoke Music Player <i
+                class="ion-ios-arrow-forward"></i></span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ftco-animate">
+          <h2 class="mb-3" id="blog_title"><span style="vertical-align: middle;">🔗</span> Building SmokeMusicPlayer: A
+            Real-Time Grid-Based Audio Visualizer</h2>
+          <hr color='white' style="hr {border: 1px white; }">
+
+          <h5 class="mb-3 mt-5" id="blog_intro"><span style="vertical-align: middle;">🔗</span> Introduction & Objective
+            </h2>
+            <p>
+              SmokeMusicPlayer was conceived as an intersection between <strong>audio frequency analysis</strong> and
+              <strong>computational fluid dynamics</strong>. The core objective of this project is to create an
+              immersive, real-time 2D audio visualizer in Unity. Unlike standard bars or wave visualizers,
+              SmokeMusicPlayer maps frequency data from incoming audio into physical forces that drive a fluid—in this
+              case, smoke—creating an organic and mesmerizing representation of the music.
+            </p>
+            <p>
+              By translating the Fast Fourier Transform (FFT) spectrum directly into grid-based velocity and density
+              modifications, we let the music physically push, swirl, and color the environment. The project is designed
+              with modularity, real-time interactivity, and high performance in mind.
+            </p>
+
+            <p>
+              <!-- PLACEHOLDER VIDEO: Main Demo of SmokeMusicPlayer -->
+              <video width="100%" height="100%" controls autoplay loop>
+                <source src="blogs-content\smoke-music-player\video\SmokeMusicPlayer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <em style="display:block; text-align:center; margin-top:10px;">Figure 1: Real-time demonstration of
+                SmokeMusicPlayer</em>
+            </p>
+
+            <h5 class="mb-3 mt-5" id="blog_architecture"><span style="vertical-align: middle;">🔗</span> Technical
+              Architecture and Steps</h2>
+              <p>
+                The simulation is rooted in Jos Stam’s <em>Stable Fluids</em> method, adapted for execution on the GPU
+                via Unity Compute Shaders. The architecture is primarily composed of two main subsystems: The
+                <strong>Audio Analysis Layer</strong> and the <strong>Fluid Dynamics Renderer</strong>.
+              </p>
+
+              <div
+                style="display: flex;flex-direction: column;align-items: center; text-align: center; margin-bottom:20px;">
+                <!-- PLACEHOLDER IMAGE: Architectural Flow Diagram -->
+                <img src="blogs-content\smoke-music-player\img\architecture_flow.png" class="img-fluid" width="720"
+                  alt="Architecture Diagram: Audio Source -> FFT Data extraction -> Density/Velocity Mapping -> Compute Shader -> Render Texture">
+                <br>
+                <em>Figure 2: System Architecture – Audio to Visual Pipeline (Please provide illustration here)</em>
+              </div>
+
+              <ol>
+                <li><strong>Audio Frequency Extraction (FFT):</strong> Using Unity's native audio API, we sample the
+                  spectrum data from the current clip using a discrete Fast Fourier Transform. The spectrum array is
+                  then grouped into bass, mid, and treble frequency bands.</li>
+                <li><strong>Data Mapping to Fluid Forces:</strong> The amplitude of these frequency bands is
+                  mathematically shaped to influence external forces on the grid. Kick drums inject sudden bursts of
+                  velocity (pushing the fluid upwards), while continuous high frequencies might continuously spawn
+                  bright-colored density at specific grid points.</li>
+                <li><strong>Grid Execution (Compute Shaders):</strong> The velocities and densities are mapped into a
+                  rendering texture. The Compute Shader runs the fluid dynamics simulation (Advection, Diffusion, and
+                  Projection) entirely on the GPU. By bypassing the CPU limit for grid iterations, the fluid feels
+                  smooth and highly responsive.</li>
+                <li><strong>Final Composition:</strong> The simulated texture is colored dynamically based on user
+                  presets and audio intensity, passing through post-processing effects before arriving on screen.</li>
+              </ol>
+
+              <h5 class="mb-3 mt-5" id="blog_tricks"><span style="vertical-align: middle;">🔗</span> Implementation
+                Tricks & Optimizations</h2>
+                <hr color='white' style="hr {border: 1px white; }">
+                <p>
+                  To maintain a stable 60+ FPS while simulating a complex grid, several clever optimization strategies
+                  and mathematical tricks were used:
+                </p>
+                <ul>
+                  <li><strong>GPU Offloading via Compute Shaders:</strong> Simulating a large 2D grid requires solving
+                    the Navier-Stokes equations iteratively. Doing this on the CPU quickly creates a bottleneck. By
+                    splitting the mathematical operations (Advection, Jacobi iteration for pressure) into massively
+                    parallel compute threads, the simulation can scale dramatically.</li>
+                  <li><strong>Audio Decay Smoothing:</strong> Raw FFT data fluctuates too quickly, causing flickering in
+                    the visualizer. To create a continuous flowing feeling, a decaying lerp (linear interpolation)
+                    function is applied to the amplitude. This allows the fluid emission to rise sharply on string hits
+                    (like a kick drum) but fade smoothly, mimicking the organic dispersion of ink.</li>
+                  <li><strong>Backwards Semi-Lagrangian Advection:</strong> To prevent the simulation from exploding
+                    computationally, the advection step traces backwards in time rather than forwards. This guarantees
+                    unconditional stability regardless of the time step or velocity magnitude, ensuring a clean
+                    presentation.</li>
+                </ul>
+
+                <div
+                  style="display: flex;flex-direction: column;align-items: center; text-align: center; margin-bottom:20px;">
+                  <!-- PLACEHOLDER IMAGE: Compute Shader threads layout -->
+                  <img src="blogs-content\smoke-music-player\img\compute_shader_logic.png" class="img-fluid" width="600"
+                    alt="Compute Shader Threads Layout: Visualizing how the grid splits into 8x8 thread groups"> <br>
+                  <em>Figure 3: Representation of Thread Groups executing grid calculations concurrently (Please provide
+                    illustration here)</em>
+                </div>
+
+                <h5 class="mb-3 mt-5" id="blog_analysis"><span style="vertical-align: middle;">🔗</span> Analysis and
+                  Performance</h2>
+                  <p>
+                    The result is a highly immersive, interactive tool that responds flawlessly to audio. During
+                    profiling on mid-range hardware (Nvidia GTX 1060), deploying the fluid solver entirely in Compute
+                    Shaders reduced the frame time of grid iterations from ~16ms (CPU) down to ~1.5ms (GPU).
+                  </p>
+                  <p>
+                    As a CPU-fallback measure, a simplified, lower-resolution solver is initialized on older
+                    environments without Compute Shader capabilities, sacrificing grid density for stability. A
+                    balancing slider to manipulate the "Stereo Balance" creates dynamic lateral drifts, taking full
+                    advantage of the fluid system's chaotic but beautiful diffusion.
+                  </p>
+
+                  <h5 class="mb-3 mt-5" id="blog_conclusion"><span style="vertical-align: middle;">🔗</span> Conclusion
+                    & Usage</h2>
+                    <p>
+                      The SmokeMusicPlayer is currently optimized for Windows Standalone builds. You can drag-and-drop
+                      any standard `.mp3` or `.wav` format, define your color palettes, tune the physical properties of
+                      the fluid (Viscosity and Diffusion), and save them to a custom preset.
+                    </p>
+                    <p>
+                      <strong>Repository Link:</strong> <a href="https://github.com/RagnarokFate/SmokeMusicPlayer"
+                        target="_blank">SmokeMusicPlayer on GitHub</a>
+                    </p>
+
+                    <div class="tag-widget post-tag-container mb-5 mt-5">
+                      <div class="tagcloud">
+                        <a class="tag-cloud-link">Audio Visualizer</a>
+                        <a class="tag-cloud-link">Fluid Dynamics</a>
+                        <a class="tag-cloud-link">Compute Shaders</a>
+                        <a class="tag-cloud-link">FFT Mapping</a>
+                        <a class="tag-cloud-link">Unity</a>
+                        <a class="tag-cloud-link">Optimization</a>
+                      </div>
+                    </div>
+
+                    <div class="about-author d-flex p-4 bg-dark">
+                      <div class="bio mr-5">
+                        <img src="images\side-picture.png" alt="Author's side picture" class="img-fluid mb-4"
+                          style="border-radius:16px;">
+                      </div>
+                      <div class="desc">
+                        <h3>Bashar Beshoti</h3>
+                        <p>I'm a Computer Science student and an avid junior software developer with a passion for a
+                          variety of subjects, including computer graphics, computer vision, image processing, and
+                          software engineering. Additionally, I have a side hobby and minor interest in animation and
+                          sound creation.</p>
+                      </div>
+                    </div>
+
+        </div> <!-- .col-lg-8 -->
+
+        <div class="col-lg-4 sidebar ftco-animate">
+          <div class="sidebar-box ftco-animate">
+            <h3 class="heading-sidebar">Smoke Music Player - INDEX</h3>
+            <hr color='white' style="hr {border: 1px white; }">
+            <ul class="categories">
+              <li><a href="smoke-music-player.html#blog_intro"> - Introduction & Objective </a></li>
+              <li><a href="smoke-music-player.html#blog_architecture"> - Architecture & Steps </a></li>
+              <li><a href="smoke-music-player.html#blog_tricks"> - Implementation Tricks </a></li>
+              <li><a href="smoke-music-player.html#blog_analysis"> - Analysis & Performance </a></li>
+              <li><a href="smoke-music-player.html#blog_conclusion"> - Conclusion </a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-box ftco-animate">
+            <h3 class="heading-sidebar">Keywords</h3>
+            <div class="tagcloud">
+              <a class="tag-cloud-link">FFT</a>
+              <a class="tag-cloud-link">Audio Visualizer</a>
+              <a class="tag-cloud-link">Navier-Stokes</a>
+              <a class="tag-cloud-link">Unity Compute</a>
+              <a class="tag-cloud-link">Shader</a>
+              <a class="tag-cloud-link">Real-time Rendering</a>
+              <a class="tag-cloud-link">C#</a>
+            </div>
+          </div>
+
+          <h3 class="heading-sidebar">Recent Blog</h3>
+          <!-- BLOG #1 -->
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(images/blog-covers/Fluid_Simulation.png);"></a>
+            <div class="text">
+              <h3 class="heading"><a href="fluid-simulation.html">Fluid Simulation Using Grid-Based Method</a></h3>
+              <div class="meta">
+                <div><a><span class="icon-calendar"></span> September 09, 2024</a></div>
+                <div><a><span class="icon-person"></span> RagnarokFate</a></div>
+                <div><a href="https://github.com/RagnarokFate/FluidSimulation"><span class="icon-github"></span>
+                    Repository</a></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BLOG #2 -->
+          <div class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" style="background-image: url(blogs-content/smoke-music-player/img/smoke-music-player-cover.png);"></a>
+            <div class="text">
+              <h3 class="heading"><a href="smoke-music-player.html">Building SmokeMusicPlayer: A Real-Time Grid-Based Audio Visualizer</a></h3>
+              <div class="meta">
+                <div><a><span class="icon-calendar"></span> March 14, 2026</a></div>
+                <div><a><span class="icon-person"></span> RagnarokFate</a></div>
+                <div><a href="https://github.com/RagnarokFate/SmokeMusicPlayer"><span class="icon-github"></span>
+                    Repository</a></div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- .col-lg-4 -->
+
+      </div>
+    </div>
+  </section> <!-- .section -->
+
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">About</h2>
+            <p> I'm a Junior Computer Science major interested in Image Processing, Computer Graphics, Vision and
+              artificial Intelligence.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="https://linkedin.com/in/bashar-beshoti"> <span
+                    class="icon-linkedin"></span> </a></li>
+              <li class="ftco-animate"><a href="https://github.com/RagnarokFate"><span class="icon-github"></span></a>
+              </li>
+              <li class="ftco-animate"><a href="https://discord.gg/XAVTV4pu3x"><span> <img
+                      src="icons-svg\discord-icon-grey.svg" alt="Discord Icon" width="24" height="24" /> </span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Links</h2>
+            <ul class="list-unstyled">
+              <li><a href="home.html#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
+              <li><a href="home.html#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
+              <li><a href="home.html#certifications-section"><span class="icon-long-arrow-right mr-2"></span>License &
+                  Certification</a></li>
+              <li><a href="home.html#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
+              <li><a href="home.html#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Question?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><a href="mailto:BasharBshoty@gmail.com"><span class="icon icon-envelope"></span><span class="text">
+                      BasharBshoty@gmail.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script> All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" />
+    </svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
